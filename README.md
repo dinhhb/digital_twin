@@ -1,6 +1,8 @@
-# DigitalTwin Crew
+# Digital Twin Agent
 
-Welcome to the DigitalTwin Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to my Digital Twin Agent, powered by [crewAI](https://crewai.com) (framework for orchestrating autonomous AI agents), [gradio](https://gradio.app/) (quick web interface), and [render](https://render.com/) (deploy web services). You can ask questions about my background and experience. 
+
+TRY IT OUT [HERE](https://digital-twin-a2k1.onrender.com/).
 
 ## Installation
 
@@ -12,11 +14,9 @@ First, if you haven't already, install uv:
 pip install uv
 ```
 
-Next, navigate to your project directory and install the dependencies:
-
-(Optional) Lock the dependencies and install them by using the CLI command:
+Next, download the dependencies:
 ```bash
-crewai install
+uv add -r requirements.txt
 ```
 ### Customizing
 
@@ -32,27 +32,12 @@ crewai install
 To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
 
 ```bash
-$ crewai run
+uv run python -m digital_twin.chat
 ```
 
 This command initializes the digital_twin Crew, assembling the agents and assigning them tasks as defined in your configuration.
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
 
 ## Understanding Your Crew
 
-The digital_twin Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
-
-## Support
-
-For support, questions, or feedback regarding the DigitalTwin Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
-
-uv add -r requirements.txt
-
-uv run python -m digital_twin.chat
+The digital_twin Crew is composed of one AI agent `digital_twin`, with unique role, goal, and tool. This agent collaborate on a series of tasks, defined in `config/tasks.yaml`. The `config/agents.yaml` file outlines the capabilities and configurations of the agent in your crew.
